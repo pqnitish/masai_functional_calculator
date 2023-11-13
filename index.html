@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masai Grid Functional Calculator </title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      .big-container{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        height: 500px;
+        text-align: center;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        background-color: black;
+        margin-top: 30px;
+        padding:10px;
+        border-radius: 20px;
+      }
+      .container {
+       
+        padding: 70px;
+        border-radius: 5px;
+        width: 100%;
+       height: 100%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        background-color: bisque;
+        gap: 10px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      }
+      .child {
+        border-radius: 10px;
+        border: 0;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        
+      }
+      .child:hover {
+        background-color: antiquewhite;
+        font-size: 25px;
+      }
+      .black:hover {
+        background-color: antiquewhite;
+        color: aqua;
+      }
+      .red {
+        background-color: red;
+      }
+      .black {
+        background-color: black;
+        color: white;
+       
+        
+      }
+      h2{
+        margin-top: 10px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 800;
+        color: rgb(7, 221, 150);
+      }
+      .input{
+        border-radius: 10px;
+        font-size: 1.5rem;
+        width: 70%;
+        padding: 20px;
+       margin: auto;
+       display: block;
+       margin-top: 10px;
+       border: none;
+       margin-bottom: 20px;
+       box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+       background-color: wheat
+      }
+    </style>
+  </head>
+  <body>
+    <div class="big-container">
+    <h2 id="head">Masai Calculator</h2>
+    <input type="text" class="input" id="display" readonly/>
+    <div class="container">
+      <button class="child" onclick="
+      curreentVal='';
+      document.querySelector('#display').value=curreentVal;
+
+        ">
+        c</button>
+      <button class="child" onclick="
+      curreentVal=curreentVal +'1';
+      document.querySelector('#display').value=curreentVal;
+      "
+      >1</button>
+      <button class="child" 
+      onclick="
+      curreentVal=curreentVal +'2';
+      document.querySelector('#display').value=curreentVal;
+      "
+      >2
+      </button>
+      <button class="child" 
+      onclick="
+      curreentVal=curreentVal +'+';
+      document.querySelector('#display').value=curreentVal;
+      "
+      >+</button>
+      <button class="child"
+      onclick="
+      curreentVal=curreentVal +'3';
+      document.querySelector('#display').value=curreentVal;
+      "
+      >
+      3</button>
+       
+        
+      <button class="child"
+      onclick="
+      curreentVal=curreentVal +'4';
+      document.querySelector('#display').value=curreentVal;
+      "
+      >4</button>
+      <button class="child"
+      onclick="
+      curreentVal=curreentVal +'-';
+      document.querySelector('#display').value=curreentVal;
+      "
+      >-</button>
+      <button class="child"
+      onclick="
+      curreentVal=curreentVal +'5';
+      document.querySelector('#display').value=curreentVal;
+      "
+      >5</button>
+      <button class="child"
+      onclick="
+      curreentVal=curreentVal +'6';
+      document.querySelector('#display').value=curreentVal;
+      "
+      >6</button>
+      <button class="child black"
+      onclick="
+      curreentVal=curreentVal +'*';
+      document.querySelector('#display').value=curreentVal;
+      "
+      >*</button>
+      <button class="child black"
+      onclick="
+      curreentVal=curreentVal +'7';
+      document.querySelector('#display').value=curreentVal;
+      "
+      >7</button>
+      <button class="child black"
+      onclick="
+      curreentVal=curreentVal +'8';
+      document.querySelector('#display').value=curreentVal;
+      "
+      >8</button>
+      <button class="child black"
+      onclick="
+      curreentVal=curreentVal +'/';
+      document.querySelector('#display').value=curreentVal;
+      "
+      >/</button>
+      <button class="child black"
+      onclick="
+      curreentVal=eval(curreentVal);
+      document.querySelector('#display').value=curreentVal;
+      "
+      >=</button>
+      <button class="child black"
+      onclick="
+      curreentVal=curreentVal +'9';
+      document.querySelector('#display').value=curreentVal;
+      "
+      >9</button>
+      <button class="child red"
+      onclick="
+      curreentVal=curreentVal +'0';
+      document.querySelector('#display').value=curreentVal;
+      "
+      >0</button>
+      <button class="child black"
+      onclick="
+      curreentVal=curreentVal +'.';
+      document.querySelector('#display').value=curreentVal;
+      "
+      >.</button>
+    </div>   
+    </div>
+  </div>
+  </body>
+  <script>
+   let curreentVal="";
+   document.querySelector("#display").value=curreentVal;
+  </script>
+</html>
